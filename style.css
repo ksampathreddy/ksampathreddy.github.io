@@ -79,8 +79,8 @@ a {
 }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
+  width: 318px;
+  height: 318px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -136,7 +136,7 @@ a {
 .contact-content {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 90px;
 }
 
 .contact-content img {
