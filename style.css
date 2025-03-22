@@ -157,3 +157,87 @@ footer {
   padding: 10px 0;
   margin-top: 40px;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* For tablets and smaller laptops */
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .skill-category {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .course, .certification, .project {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .contact-content {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For tablets */
+  #navbar .logo {
+    float: none;
+    text-align: center;
+    display: block;
+  }
+
+  #navbar ul {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #navbar ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skill-category {
+    flex: 1 1 calc(100% - 20px);
+  }
+
+  .course, .certification, .project {
+    flex: 1 1 calc(100% - 20px);
+  }
+
+  .contact-content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile phones */
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .contact-content {
+    gap: 20px;
+  }
+
+  .contact-content img {
+    width: 30px;
+    height: 30px;
+  }
+}
