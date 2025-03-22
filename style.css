@@ -1,10 +1,11 @@
 /* General Styles */
 body {
+  background-color: #f8f9fa; /* Light background */
+  color: #333; /* Dark text for readability */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #333;
 }
 
 .container {
@@ -60,9 +61,62 @@ a {
   color: #f4c10f;
 }
 
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Expanded Navbar */
+#navbar.expanded {
+  background: #333; /* Same as navbar background */
+}
+
+#navbar.expanded .nav-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Position below the navbar */
+  right: 20px; /* Align to the right */
+  background: #333; /* Same as navbar background */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#navbar.expanded .nav-links li {
+  margin: 10px 0;
+}
+
+#navbar.expanded .nav-links li a {
+  color: #fff; /* Same as navbar text color */
+  font-size: 18px; /* Same as navbar font size */
+}
+
+#navbar.expanded .nav-links li a:hover {
+  color: #f4c10f; /* Same as navbar hover color */
+}
+
 /* Section Styles */
 .section {
   padding: 60px 0;
+  background-color: #fff; /* White background for sections */
+  margin: 0; /* Remove margin to eliminate separation */
+  border-radius: 0; /* Remove border-radius for seamless blending */
+  box-shadow: none; /* Remove box shadow for seamless blending */
 }
 
 .section h2 {
@@ -104,15 +158,42 @@ a {
   text-align: center;
 }
 
-/* Courses and Certifications Sections */
-.courses-content, .certifications-content {
+/* Certifications Section */
+.certifications-content {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.course, .certification {
-  flex: 1 1 calc(50% - 20px);
+.certification {
+  flex: 1 1 calc(33.333% - 20px);
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Hyperlink Styles for Certificate and GitHub Links */
+.certification a,
+.project a {
+  color: #007bff; /* Blue color for hyperlinks */
+  text-decoration: underline; /* Underline for hyperlinks */
+}
+
+.certification a:hover,
+.project a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Courses Section */
+.courses-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course {
+  flex: 1 1 100%; /* 1 in a row */
   background: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
@@ -126,7 +207,7 @@ a {
 }
 
 .project {
-  flex: 1 1 calc(50% - 20px);
+  flex: 1 1 100%; /* 1 in a row */
   background: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
@@ -151,51 +232,31 @@ a {
 
 /* Footer Styles */
 footer {
-  background: #333;
+  background: #222; /* Darker footer color */
   color: #fff;
   text-align: center;
-  padding: 10px 0;
-  margin-top: 40px;
+  padding: 3px 0; /* Further reduced height */
+  margin-top: 0; /* Remove margin to eliminate separation */
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  /* For tablets and smaller laptops */
-  .profile-photo {
-    width: 250px;
-    height: 250px;
-  }
-
   .skill-category {
     flex: 1 1 calc(50% - 20px);
-  }
-
-  .course, .certification, .project {
-    flex: 1 1 calc(50% - 20px);
-  }
-
-  .contact-content {
-    gap: 50px;
   }
 }
 
 @media (max-width: 768px) {
-  /* For tablets */
-  #navbar .logo {
-    float: none;
-    text-align: center;
-    display: block;
+  .menu-toggle {
+    display: flex;
   }
 
-  #navbar ul {
-    float: none;
-    text-align: center;
-    margin-top: 10px;
+  .nav-links {
+    display: none;
   }
 
-  #navbar ul li {
-    display: block;
-    margin: 10px 0;
+  #navbar.expanded .nav-links {
+    display: flex;
   }
 
   .about-content {
@@ -208,12 +269,8 @@ footer {
     height: 200px;
   }
 
-  .skill-category {
-    flex: 1 1 calc(100% - 20px);
-  }
-
-  .course, .certification, .project {
-    flex: 1 1 calc(100% - 20px);
+  .skill-category, .course, .certification, .project {
+    flex: 1 1 100%; /* 1 in a row */
   }
 
   .contact-content {
@@ -222,7 +279,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  /* For mobile phones */
   .profile-photo {
     width: 150px;
     height: 150px;
