@@ -175,13 +175,13 @@ a {
 
 /* Hyperlink Styles for Certificate and GitHub Links */
 .certification a,
-.project a {
+.project a,.course a {
   color: #007bff; /* Blue color for hyperlinks */
   text-decoration: underline; /* Underline for hyperlinks */
 }
 
 .certification a:hover,
-.project a:hover {
+.project a:hover,.course a:hover {
   color: #0056b3; /* Darker blue on hover */
 }
 
