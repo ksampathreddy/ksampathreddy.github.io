@@ -1,16 +1,16 @@
-## Hi there 👋
+# 🌟 My Portfolio  
+Welcome to my Personal portfolio website! This website showcases my projects, skills, and experience in AI/ML, web development, and more.  
 
-<!--
-**ksampathreddy/ksampathreddy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🚀 About Me  
+I am a **BTech student** passionate about **AI/ML and secure credit card transactions**. 
+<!-- My goal is to pursue an **MS in AI/ML or Computer Science in the USA**.   -->
 
-Here are some ideas to get you started:
+## 📌 Features  
+- **Homepage** – Introduction & overview  
+- **Projects** – My AI/ML, web development, and chatbot projects  
+- **Skills** – Technologies and tools I work with  
+- **Contact** – Get in touch with me  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+[Click here](https://ksampathreddy.github.io/) to visit the My Portfolio<br>
+
