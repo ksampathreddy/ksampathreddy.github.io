@@ -12,5 +12,5 @@ I am a **BTech student** passionate about **AI/ML**.
 - **Contact** – Get in touch with me  
 
 
-#[Click here](https://ksampathreddy.github.io/) to visit the My Portfolio<br>
+# [Click here](https://ksampathreddy.github.io/) to visit the My Portfolio<br>
 
