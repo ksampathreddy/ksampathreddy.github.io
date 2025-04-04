@@ -6,6 +6,66 @@
   <title>Sampath Reddy Kamsani - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/i.png" type="image/x-icon">
+  <style>
+     .section-heading h2 {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .section-heading h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #25db52;
+    }
+    
+    .dark-mode .section-heading h2::after {
+      background-color: #4da6ff;
+    }
+    
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .dark-mode .section {
+      background-color: #1e1e1e;
+    }
+    .dark-mode .skill-category,
+    .dark-mode .certification,
+    .dark-mode .course,
+    .dark-mode .project {
+      background-color: #2d2d2d;
+    }
+    .dark-mode footer {
+      background-color: #000000;
+    }
+    .dark-mode #navbar {
+      background-color: #1a1a1a;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .dark-mode .section {
+      background-color: #1e1e1e;
+    }
+    .dark-mode .skill-category,
+    .dark-mode .certification,
+    .dark-mode .course,
+    .dark-mode .project {
+      background-color: #2d2d2d;
+    }
+    .dark-mode footer {
+      background-color: #000000;
+    }
+    .dark-mode #navbar {
+      background-color: #1a1a1a;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -18,12 +78,12 @@
         <span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#courses" class="nav-link">Courses</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -31,7 +91,7 @@
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
-      <h2>About Me</h2>
+      <div class="section-heading"><h2>About Me</h2></div>
       <div class="about-content">
         <img src="images/1.jpg" alt="Profile Photo" class="profile-photo">
         <div class="about-text">
@@ -44,7 +104,7 @@
   <!-- Skills Section -->
   <section id="skills" class="section">
     <div class="container">
-      <h2>Skills</h2>
+      <div class="section-heading"><h2>Skills</h2></div>
       <div class="skills-content">
         <div class="skill-category">
           <h3>Programming</h3>
@@ -73,7 +133,7 @@
   <!-- Courses Section -->
   <section id="courses" class="section">
     <div class="container">
-      <h2>Courses</h2>
+      <div class="section-heading"><h2>Courses</h2></div>
       <div class="courses-content">
         <div class="course">
           <h3>Credit-Linked Program in Artificial Intelligence and Machine Learning (Online Mode)</h3>
@@ -88,7 +148,7 @@
   <!-- Certifications Section -->
   <section id="certifications" class="section">
     <div class="container">
-      <h2>Certifications</h2>
+      <div class="section-heading"><h2>Certifications</h2></div>
       <div class="certifications-content">
         <div class="certification">
           <h3>Machine Learning with Python</h3>
@@ -107,11 +167,11 @@
   <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container">
-      <h2>Projects</h2>
+      <div class="section-heading"><h2>Projects</h2></div>
       <div class="projects-content">
         <div class="project">
           <h3>An Online Fuzzy Fraud Detection Framework For Credit Card Transactions</h3>
-          <p>Tools: Python, Fuzzy Logistic Regression, Monte Carlo Simulations, Probabilistic Sampling. Dataset: Real Transaction Dataset (European Transactions), 284,807 transactions (492 fraudulent), 29 predictors (V1–V28 are masked due to privacy). Methodology: The study uses Fuzzy Logistic Regression to detect fraudulent credit card transactions in real-time, addressing class imbalance, non-stationary fraud patterns, and separation issues. It follows a three-stage process (Tuning → Learning → Online Implementation) to optimize fuzzy coefficients, classify transactions using fuzzy thresholds, and efficiently detect fraud with high accuracy.</p>
+          <p>Tools: Python, Fuzzy Logistic Regression, Monte Carlo Simulations, Probabilistic Sampling. Dataset: Real Transaction Dataset (European Transactions), 284,807 transactions (492 fraudulent), 29 predictors (V1-V28 are masked due to privacy). Methodology: The study uses Fuzzy Logistic Regression to detect fraudulent credit card transactions in real-time, addressing class imbalance, non-stationary fraud patterns, and separation issues. It follows a three-stage process (Tuning → Learning → Online Implementation) to optimize fuzzy coefficients, classify transactions using fuzzy thresholds, and efficiently detect fraud with high accuracy.</p>
           <a href="#" target="_self">GitHub Repository</a>
         </div>
         <div class="project">
@@ -123,23 +183,32 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-content">
+ <!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-heading"><h2>Contact</h2></div>
+    <div class="contact-content">
+      <div class="contact-item">
         <a href="https://www.linkedin.com/in/sampath-reddy-kamsani/" target="_self">
           <img src="images/l.png" alt="LinkedIn">
         </a>
+        <span>LinkedIn Profile</span>
+      </div>
+      <div class="contact-item">
         <a href="https://github.com/ksampathreddy" target="_self">
           <img src="images/g.png" alt="GitHub">
         </a>
+        <span>GitHub Profile</span>
+      </div>
+      <div class="contact-item">
         <a href="mailto:sampathreddykamsani@gmail.com">
           <img src="images/m.png" alt="Email">
         </a>
+        <span>Email</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
@@ -153,11 +222,56 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const navbar = document.querySelector('#navbar');
     const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-link');
   
     menuToggle.addEventListener('click', () => {
       navbar.classList.toggle('expanded');
       navLinks.classList.toggle('active');
     });
+
+    // Close menu when clicking any nav link
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navbar.classList.remove('expanded');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Dark mode toggle
+    const darkModeToggle = document.createElement('button');
+    darkModeToggle.id = 'dark-mode-toggle';
+    darkModeToggle.innerHTML = '🌙';
+    darkModeToggle.style.position = 'fixed';
+    darkModeToggle.style.bottom = '20px';
+    darkModeToggle.style.right = '20px';
+    darkModeToggle.style.zIndex = '1000';
+    darkModeToggle.style.width = '50px';
+    darkModeToggle.style.height = '50px';
+    darkModeToggle.style.borderRadius = '50%';
+    darkModeToggle.style.background = '#333';
+    darkModeToggle.style.color = '#fff';
+    darkModeToggle.style.border = 'none';
+    darkModeToggle.style.cursor = 'pointer';
+    darkModeToggle.style.fontSize = '20px';
+    
+    document.body.appendChild(darkModeToggle);
+    
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      darkModeToggle.innerHTML = isDarkMode ? '☀️' : '🌙';
+      
+      // Save preference to localStorage
+      localStorage.setItem('darkMode', isDarkMode);
+    }
+    
+    // Initialize dark mode from localStorage
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      darkModeToggle.innerHTML = '☀️';
+    }
+    
+    darkModeToggle.addEventListener('click', toggleDarkMode);
   </script>
 </body>
 </html>
