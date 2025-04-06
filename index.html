@@ -120,7 +120,7 @@
         </div>
         <div class="skill-category">
           <h3>Tools</h3>
-          <p>Git, Docker, AWS, Firebase</p>
+          <p>Git, Docker, AWS</p>
         </div>
         <div class="skill-category">
           <h3>Databases</h3>
@@ -139,7 +139,7 @@
           <h3>Credit-Linked Program in Artificial Intelligence and Machine Learning (Online Mode)</h3>
           <p>IIT Guwahati</p>
           <p>Started: February 2025</p>
-          <a href="#" target="_self">Certificate</a>
+          <a href="images/Sampath Reddy [IITG_AIML_2503331]_Admission_Letter.png" target="_self">Certificate</a>
         </div>
       </div>
     </div>
@@ -151,15 +151,28 @@
       <div class="section-heading"><h2>Certifications</h2></div>
       <div class="certifications-content">
         <div class="certification">
-          <h3>Machine Learning with Python</h3>
-          <p>Coursera</p>
-          <a href="https://www.coursera.org/account/accomplishments/certificate/IK7DDUNVC2QG" target="_self">Certificate</a>
+          <h3>Python for Beginners</h3>
+          <p>Simplilearn | SkillUP </p>
+          <a href="images/python_beginners.pdf" target="_self">Certificate</a>
         </div>
         <div class="certification">
           <h3>Python Basics</h3>
           <p>Hacker Rank</p>
           <a href="https://www.hackerrank.com/certificates/iframe/d9297efaa2b3" target="_self">Certificate</a>
         </div>
+        <div class="certification">
+          <h3>Machine Learning with Python</h3>
+          <p>Coursera</p>
+          <a href="https://www.coursera.org/account/accomplishments/certificate/IK7DDUNVC2QG" target="_self">Certificate</a>
+          <p>Great Learning</p>
+          <a href="images/greatlearning.pdf" target="_self">Certificate</a>
+        </div>
+        <div class="certification">
+          <h3>Python</h3>
+          <p>Kaggle</p>
+          <a href="images/Kamsani Sampath Reddy - Python.png" target="_self">Certificate</a>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -172,12 +185,12 @@
         <div class="project">
           <h3>An Online Fuzzy Fraud Detection Framework For Credit Card Transactions</h3>
           <p>Tools: Python, Fuzzy Logistic Regression, Monte Carlo Simulations, Probabilistic Sampling. Dataset: Real Transaction Dataset (European Transactions), 284,807 transactions (492 fraudulent), 29 predictors (V1-V28 are masked due to privacy). Methodology: The study uses Fuzzy Logistic Regression to detect fraudulent credit card transactions in real-time, addressing class imbalance, non-stationary fraud patterns, and separation issues. It follows a three-stage process (Tuning → Learning → Online Implementation) to optimize fuzzy coefficients, classify transactions using fuzzy thresholds, and efficiently detect fraud with high accuracy.</p>
-          <a href="#" target="_self">GitHub Repository</a>
+          <a href="#" target="_self">Repository</a>
         </div>
         <div class="project">
           <h3>Chatbot</h3>
           <p>Build a Chatbot by NLP and Python</p>
-          <a href="" target="_self">GitHub Repository</a>
+          <a href="" target="_self">Repository</a>
         </div>
       </div>
     </div>
@@ -213,7 +226,7 @@
   <!-- Footer -->
   <footer>
     <div class="contain">
-      <p>&copy; 2025 Sampath Reddy Kamsani. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Sampath Reddy Kamsani. All rights reserved.</p>
     </div>
   </footer>
 
@@ -273,5 +286,9 @@
     
     darkModeToggle.addEventListener('click', toggleDarkMode);
   </script>
+  <script>
+    // Get current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
