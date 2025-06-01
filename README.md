@@ -5,6 +5,9 @@ Welcome to my Personal portfolio website! This website showcases my projects, sk
 I am a **BTech student** passionate about **AI/ML**. 
 <!-- My goal is to pursue an **MS in AI/ML or Computer Science in the USA**.   -->
 
+# [Click here](https://ksampathreddy.github.io/) to visit the My Portfolio<br>
+
+
 ## Features  
 - **Homepage** – Introduction & overview
 - **Skills** – Technologies and tools I work with  
@@ -14,5 +17,4 @@ I am a **BTech student** passionate about **AI/ML**.
 - **Contact** – Get in touch with me  
 
 
-# [Click here](https://ksampathreddy.github.io/) to visit the My Portfolio<br>
 
