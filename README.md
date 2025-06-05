@@ -8,7 +8,7 @@ I am a **BTech student** passionate about **AI/ML**.
 # [Click here](https://ksampathreddy.github.io/) to visit the My Portfolio<br>
 
 
-## Features  
+## Features in Portfolio 
 - **Homepage** – Introduction & overview
 - **Skills** – Technologies and tools I work with  
 - **Projects** – My AI/ML, web development, and chatbot projects
