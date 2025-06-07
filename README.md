@@ -1,8 +1,8 @@
 # My Portfolio  
-Welcome to my Personal portfolio website! This website showcases my projects, skills, and experience in AI/ML, web development, and more.  
+Welcome to my Personal portfolio website! This website showcases my projects, skills, courses and experience in AI/ML, web development, and more.  
 
 ## About Me  
-I am a **BTech student** passionate about **AI/ML**. 
+I am a **BTech student** passionate about **AI&ML**. 
 <!-- My goal is to pursue an **MS in AI/ML or Computer Science in the USA**.   -->
 
 # [Click here](https://ksampathreddy.github.io/) to visit the My Portfolio<br>
