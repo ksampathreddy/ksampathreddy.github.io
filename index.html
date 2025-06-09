@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,19 +9,19 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .btn {
-  display: inline-block;
-  padding: 5px 5px;
-  background-color: rgb(33, 196, 33);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 15px 0;
-  transition: background-color 0.3s ease;
-}
+      display: inline-block;
+      padding: 5px 5px;
+      background-color: rgb(33, 196, 33);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 15px 0;
+      transition: background-color 0.3s ease;
+    }
 
-.btn:hover {
-  background-color: #0056b3;
-}
+    .btn:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -216,7 +215,7 @@
         <div class="certification-card">
           <h3>Deep Learning Basics</h3>
           <p>Simplilearn | SkillUP</p>
-          <p>Completed Deep Learning fundamentals, covering essential topics such as neural networks, activation functions, backpropagation, optimization techniques (SGD, Adam), and Introductory concepts in CNNs and RNNs.8/0      </p>
+          <p>Completed Deep Learning fundamentals, covering essential topics such as neural networks, activation functions, backpropagation, optimization techniques (SGD, Adam), and Introductory concepts in CNNs and RNNs.</p>
           <a href="images/DLbeginners.pdf" target="_blank" class="btn">Certificate</a>
         </div>
       </div>
@@ -249,7 +248,424 @@
     </div>
   </div>
 </section>
-  <!-- Footer -->
+
+<!-- Chatbot Section -->
+<div class="chatbot-container">
+    <div id="chat-text-box">
+        <div id="chat-text">Hi, I'm your AI Assistant</div>
+        <div id="chat-text">Ask me about AI/ML or this portfolio!</div>
+    </div>
+    <div id="chat-icon" onclick="toggleChatbox()">
+        <img src="images/chatbot1.png" alt="Chatot" style="width: 80px; height: 80px;"/>
+    </div>
+</div>
+
+<!-- Chatbox -->
+<div class="chatbox" id="chatbox">
+    <div id="chat-header">
+        <strong><span>AI Assistant</span></strong>
+        <button id="close-chatbox" onclick="toggleChatbox()">×</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div id="chat-options">
+        <button onclick="selectOption('Your Skills')">Your Skills</button>
+        <button onclick="selectOption('Your Projects')">Your Projects</button>
+        <button onclick="selectOption('Contact Info')">Contact Info</button>
+        <button onclick="selectOption('About You')">About You</button>
+    </div>
+    <div id="chat-input">
+        <input type="text" id="input-box" placeholder="Ask about AI/ML or this portfolio...">
+        <button id="send-btn" onclick="sendMessage()">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<style>    
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#chat-text-box {
+    background-color: #21c421;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 14px;
+    display: none;
+}
+
+#chat-icon {
+    cursor: pointer;
+    background: none;
+    transition: transform 0.3s;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+}
+
+#chat-icon:hover {
+    transform: scale(1.1);
+}
+
+.chatbox {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+#chat-header {
+    background-color: #21c421;
+    color: white;
+    padding: 10px 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-chatbox {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.user-message {
+    background-color: #e3f2fd;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+#chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+#input-box {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+#send-btn {
+    background-color: #21c421;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+#send-btn:hover {
+    background-color: #1a9e1a;
+}
+
+#chat-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+#chat-options button {
+    background-color: #21c421;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+#chat-options button:hover {
+    background-color: #1a9e1a;
+}
+
+@media (max-width: 768px) {
+    .chatbox {
+        width: 280px;
+        right: 10px;
+    }
+    
+    #chat-text-box {
+        max-width: 200px;
+    }
+    
+    #chat-options {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+// Custom responses for your portfolio chatbot
+const portfolioResponses = {
+    "hello": "Hello! I'm your AI assistant. How can I help you today?",
+    "hi": "Hi there! Ask me about Sampath's skills, projects, or experience.",
+    "your skills": "Sampath specializes in:\n- Python, Java, C, JavaScript\n- TensorFlow, PyTorch, Scikit-learn\n- NLP, Computer Vision\n- Web Development (HTML/CSS, Flask)\n- Git, Docker, AWS, MySQL",
+    "skills": "Sampath's technical skills include:\n1. Programming: Python, Java, C, JavaScript\n2. AI/ML: TensorFlow, PyTorch, Scikit-learn\n3. Web: HTML/CSS, JavaScript, Flask\n4. Tools: Git, Docker, AWS, MySQL",
+    "your projects": "Sampath has worked on:\n1. Online Fuzzy Fraud Detection Framework\n2. NLP Chatbot\n3. Other AI/ML projects (check GitHub for details)",
+    "projects": "Key projects:\n- Fraud Detection System\n- NLP Chatbot\n- Various machine learning implementations\nView more on GitHub!",
+    "contact info": "You can reach Sampath via:\n- LinkedIn: linkedin.com/in/sampath-reddy-kamsani\n- GitHub: github.com/ksampathreddy\n- Email: sampathreddykamsani@gmail.com",
+    "contact": "Contact options:\n1. LinkedIn: Professional profile\n2. GitHub: Code repositories\n3. Email: sampathreddykamsani@gmail.com",
+    "about you": "Sampath is a BTech student specializing in AI & ML with hands-on experience in machine learning, deep learning, and data science. Passionate about building innovative AI solutions.",
+    "about": "Sampath Reddy Kamsani is an AI/ML enthusiast currently pursuing his BTech with focus on artificial intelligence and machine learning. He has practical experience with Python, TensorFlow, and various ML algorithms.",
+    "experience": "Sampath has practical experience in:\n- Developing machine learning models\n- Implementing deep learning solutions\n- Building web applications\n- Working with various AI frameworks",
+    "education": "Sampath is currently pursuing BTech in AI & ML. He's also enrolled in IIT Guwahati's Credit-Linked Program in AI/ML.",
+    "certifications": "Sampath has certifications in:\n1. Python (HackerRank, Cisco)\n2. Machine Learning (Coursera)\n3. Deep Learning (Simplilearn)\nView all in Certifications section!",
+    "resume": "You can view Sampath's resume by clicking the 'Resume' button in the navigation or hero section.",
+    "github": "Check out Sampath's GitHub profile at github.com/ksampathreddy for code repositories and projects.",
+    "linkedin": "Visit Sampath's LinkedIn profile at linkedin.com/in/sampath-reddy-kamsani for professional details.",
+    "what can you do": "I can tell you about:\n- Sampath's skills and expertise\n- His projects and experience\n- Education and certifications\n- How to contact him",
+    "help": "Try asking about:\n- Skills\n- Projects\n- Contact info\n- Experience\n- Education\nOr use the quick buttons above!",
+    "thanks": "You're welcome! Let me know if you need anything else.",
+    "thank you": "Happy to help! Feel free to ask more questions.",
+    "machine learning": "Sampath has experience with various ML techniques including supervised and unsupervised learning, neural networks, and model evaluation.",
+    "deep learning": "Sampath works with deep learning frameworks like TensorFlow and PyTorch, with knowledge of CNNs, RNNs, and other architectures.",
+    "python": "Python is one of Sampath's primary languages, used for AI/ML development, data analysis, and backend web development.",
+    "tensorflow": "Sampath has practical experience with TensorFlow for building and training deep learning models.",
+    "nlp": "Sampath has worked on Natural Language Processing projects including chatbots and text classification systems."
+};
+
+const keywordMap = {
+    "skill": "your skills",
+    "expertise": "your skills",
+    "technology": "your skills",
+    "project": "your projects",
+    "work": "your projects",
+    "portfolio": "your projects",
+    "contact": "contact info",
+    "reach": "contact info",
+    "connect": "contact info",
+    "about": "about you",
+    "background": "about you",
+    "who": "about you",
+    "experience": "about you",
+    "history": "about you",
+    "education": "about you",
+    "study": "education",
+    "certificate": "certifications",
+    "cert": "certifications",
+    "course": "education",
+    "resume": "resume",
+    "cv": "resume",
+    "github": "github",
+    "code": "github",
+    "repository": "github",
+    "linkedin": "linkedin",
+    "profile": "linkedin",
+    "help": "help",
+    "what": "what can you do",
+    "assist": "what can you do",
+    "machine learning": "machine learning",
+    "ml": "machine learning",
+    "deep learning": "deep learning",
+    "dl": "deep learning",
+    "ai": "machine learning",
+    "artificial intelligence": "machine learning",
+    "python": "python",
+    "tensorflow": "tensorflow",
+    "tf": "tensorflow",
+    "natural language processing": "nlp",
+    "language": "nlp"
+};
+
+// Show initial message bubble
+setTimeout(() => {
+    document.getElementById('chat-text-box').style.display = 'block';
+    setTimeout(() => {
+        document.getElementById('chat-text-box').style.display = 'none';
+    }, 3000);
+}, 2000);
+
+// Toggle chat visibility
+function toggleChatbox() {
+    const chatbox = document.getElementById('chatbox');
+    if (chatbox.style.display === 'none' || !chatbox.style.display) {
+        chatbox.style.display = 'flex';
+        displayGreeting();
+    } else {
+        chatbox.style.display = 'none';
+    }
+}
+
+// Greet based on time
+function displayGreeting() {
+    const hour = new Date().getHours();
+    const greeting = hour < 12 ? "Good Morning!" : hour < 18 ? "Good Afternoon!" : "Good Evening!";
+    addMessage(`<strong>AI Assistant:</strong> ${greeting}`, 'bot');
+    addMessage("<strong>AI Assistant:</strong> I can tell you about Sampath's skills, projects, and experience. How can I help?", 'bot');
+}
+
+// Add message to chat UI
+function addMessage(text, sender) {
+    const chatMessages = document.getElementById('chat-messages');
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
+    
+    // Use innerHTML to render bold tags
+    messageDiv.innerHTML = text;
+
+    // Handle line breaks for bot messages
+    if (sender === 'bot') {
+        const brCount = (text.match(/<br>/g) || []).length;
+        if (brCount > 0) {
+            const parts = text.split('<br>');
+            messageDiv.innerHTML = parts.join('<br>');
+        }
+    }
+
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Button click triggers
+function selectOption(option) {
+    addMessage(`<strong>You:</strong> ${option}`, 'user');
+    const response = getBestResponse(option);
+    setTimeout(() => {
+        addMessage(`<strong>AI Assistant:</strong> ${response}`, 'bot');
+    }, 500);
+}
+
+function getBestResponse(message) {
+    const cleanMsg = message.toLowerCase().replace(/[^\w\s]/gi, '');
+    
+    // Exact match
+    if (portfolioResponses[cleanMsg]) {
+        return portfolioResponses[cleanMsg];
+    }
+
+    // Check keyword mappings
+    const words = cleanMsg.split(/\s+/);
+    for (const word of words) {
+        const mapped = keywordMap[word];
+        if (mapped && portfolioResponses[mapped]) {
+            return portfolioResponses[mapped];
+        }
+    }
+
+    // Soft match: check if the user message includes any response key
+    for (const key in portfolioResponses) {
+        if (cleanMsg.includes(key)) {
+            return portfolioResponses[key];
+        }
+    }
+
+    // Match with similar questions
+    const similarity = (a, b) => {
+        const aWords = a.split(' ');
+        const bWords = b.split(' ');
+        let matchCount = 0;
+        aWords.forEach(word => {
+            if (bWords.includes(word)) matchCount++;
+        });
+        return matchCount / Math.max(aWords.length, bWords.length);
+    };
+
+    let bestMatch = "";
+    let bestScore = 0;
+    for (const key in portfolioResponses) {
+        const score = similarity(cleanMsg, key);
+        if (score > bestScore) {
+            bestScore = score;
+            bestMatch = key;
+        }
+    }
+
+    if (bestScore >= 0.4) {
+        return portfolioResponses[bestMatch];
+    }
+
+    return "I'm not sure I understand. Try asking about Sampath's skills, projects, or experience. Or use the quick buttons above!";
+}
+
+// Handle send
+function sendMessage() {
+    const inputBox = document.getElementById('input-box');
+    const message = inputBox.value.trim();
+    if (message) {
+        addMessage(`<strong>You:</strong> ${message}`, 'user');
+        inputBox.value = '';
+        setTimeout(() => {
+            const response = getBestResponse(message);
+            addMessage(`<strong>AI Assistant:</strong> ${response}`, 'bot');
+        }, 800);
+    }
+}
+
+// Enter key triggers send
+document.getElementById('input-box').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') sendMessage();
+});
+
+// Hide chat initially
+document.getElementById('chatbox').style.display = 'none';
+</script>
+
+
+
+<!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-content">
