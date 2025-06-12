@@ -14,6 +14,7 @@ I am a **BTech student** passionate about **AI&ML**.
 - **Projects** – My AI/ML, web development, and chatbot projects
 - **Courses** - The Courses, I have done.
 - **Certifications** - The Certificates, I have received.
+- **Chatbot** - A chatbot implementation, designed for my professional portfolio.
 - **Contact** – Get in touch with me  
 
 
