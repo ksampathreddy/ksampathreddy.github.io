@@ -165,6 +165,18 @@
             </div>
           </div>
         </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/p4.png" alt="Chatbot Project">
+          </div>
+          <div class="project-info">
+            <h3>E-Commerce Customer Segmentation</h3>
+            <p>This project analyzes e-commerce purchasing patterns using machine learning to group customers based on their product category preferences. It enables personalized marketing strategies by identifying distinct customer segments and their characteristic buying behaviors.</p>
+            <div class="project-links">
+              <a href="https://github.com/ksampathreddy/E-Commerce-Customer-Segmentation" class="btn">Repository</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section> 
@@ -564,7 +576,7 @@ function displayGreeting() {
     const hour = new Date().getHours();
     const greeting = hour < 12 ? "Good Morning!" : hour < 18 ? "Good Afternoon!" : "Good Evening!";
     addMessage(`<strong>AI Assistant:</strong> ${greeting}`, 'bot');
-    addMessage("<strong>AI Assistant:</strong> I can tell you about Sampath's skills, projects, and experience. How can I help?", 'bot');
+    addMessage("<strong>AI Assistant:</strong> How can I help? I can tell you about Sampath's skills, projects, and experience.", 'bot');
 }
 
 // Add message to chat UI
