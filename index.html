@@ -576,7 +576,7 @@ function displayGreeting() {
     const hour = new Date().getHours();
     const greeting = hour < 12 ? "Good Morning!" : hour < 18 ? "Good Afternoon!" : "Good Evening!";
     addMessage(`<strong>AI Assistant:</strong> ${greeting}`, 'bot');
-    addMessage("<strong>AI Assistant:</strong> I can tell you about Sampath's skills, projects, and experience. How can I help?", 'bot');
+    addMessage("<strong>AI Assistant:</strong> How can I help? I can tell you about Sampath's skills, projects. ", 'bot');
 }
 
 // Add message to chat UI
